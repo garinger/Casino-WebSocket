@@ -67,6 +67,11 @@ setInterval(() => {
       outcome: gameState.outcome,
       date: gameState.spinStart,
     });
+
+    if (gameState.pastGames.length > 10) {
+      gameState.pastGames.shift();
+    }
+
     gameState.spinning = false;
     emitGameState();
   }, spinDurationMilliseconds);
