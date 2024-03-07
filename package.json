@@ -1,0 +1,12 @@
+{
+  "name": "casino-socket.io-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "app.js",
+  "author": "Jackson Garinger",
+  "dependencies": {
+    "date-fns": "^3.3.1",
+    "socket.io": "^4.7.4"
+  }
+}
