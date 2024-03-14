@@ -1,7 +1,9 @@
 import { Server } from "socket.io";
 import { format } from "date-fns";
 
-const io = new Server(3000, { cors: { origin: ["http://localhost:5173"] } });
+const io = new Server(3000, {
+  cors: { origin: "https://casino.jacksongaringer.com" },
+});
 
 const millisecondsBetweenSpins = 12_000;
 const spinDurationMilliseconds = 6_000;
