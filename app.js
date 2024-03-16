@@ -9,6 +9,7 @@ const millisecondsBetweenSpins = 12_000;
 const spinDurationMilliseconds = 6_000;
 const spinOffsetAbsoluteValue = 15;
 const gameState = {
+  serverTime: null,
   outcome: null,
   spinning: false,
   spinStart: null,
@@ -23,6 +24,7 @@ let spinCount = 0;
 const getOutcome = () => Math.floor(Math.random() * 15);
 const getSpinOffset = (abs) => Math.floor(Math.random() * (abs * 2 + 1)) - abs;
 const emitGameState = () => {
+  gameState.serverTime = Date.now();
   io.emit("gameState", gameState);
   console.log(
     "[Game State]",
