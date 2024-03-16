@@ -54,7 +54,7 @@ const spin = () => {
   gameState.outcome = getOutcome();
   gameState.spinning = true;
   gameState.spinStart = new Date();
-  gameState.spinEnd = new Date(Date.now() + spinDurationMilliseconds);
+  gameState.spinEnd = Date.now() + spinDurationMilliseconds;
   gameState.spinOffset = getSpinOffset(spinOffsetAbsoluteValue);
   gameState.nextSpin = Date.now() + millisecondsBetweenSpins;
 
