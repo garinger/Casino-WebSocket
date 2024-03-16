@@ -53,7 +53,7 @@ io.on("connection", (socket) => {
 const spin = () => {
   gameState.outcome = getOutcome();
   gameState.spinning = true;
-  gameState.spinStart = new Date();
+  gameState.spinStart = Date.now();
   gameState.spinEnd = Date.now() + spinDurationMilliseconds;
   gameState.spinOffset = getSpinOffset(spinOffsetAbsoluteValue);
   gameState.nextSpin = Date.now() + millisecondsBetweenSpins;
